@@ -537,6 +537,10 @@ npx playwright test --headed
 
 O parâmetro `--headed` permite visualizar o navegador durante a execução.
 
+📝 Comando principal atualmente
+
+Para deixar registrado de forma clara para quem entrar no projeto: npm run test:allure
+
 ---
 
 ## Listar os testes encontrados

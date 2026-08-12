@@ -1,0 +1,366 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: accounting\accounts-setup.spec.ts >> Accounting - Accounts Setup >> should edit the account type and complete the setup step
+- Location: tests\accounting\accounts-setup.spec.ts:4:7
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Edit' })
+    - locator resolved to <button class="btn btn-default btn-xs tree-toolbar-button">Edit</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    43 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]:
+        - generic [ref=e9]:
+          - generic [ref=e10]: Accounts Setup
+          - generic [ref=e11]: ERPNext
+        - button [ref=e12]
+      - generic [ref=e15]:
+        - generic [ref=e18] [cursor=pointer]:
+          - generic [ref=e21]: Search
+          - generic [ref=e22]: Ctrl+K
+        - generic [ref=e23]: Notification
+      - generic [ref=e31]:
+        - generic "Setup" [ref=e32]:
+          - generic [ref=e34] [cursor=pointer]:
+            - generic [ref=e37]: Setup
+            - button [ref=e39]
+          - generic [ref=e41]:
+            - generic "Chart of Accounts" [ref=e42]:
+              - link "Chart of Accounts" [ref=e44] [cursor=pointer]:
+                - /url: /desk/account
+            - generic "Chart of Cost Centers" [ref=e47]:
+              - link "Chart of Cost Centers" [ref=e49] [cursor=pointer]:
+                - /url: /desk/cost-center
+            - generic "Account Category" [ref=e52]:
+              - link "Account Category" [ref=e54] [cursor=pointer]:
+                - /url: /desk/account-category
+            - generic "Accounting Dimension" [ref=e57]:
+              - link "Accounting Dimension" [ref=e59] [cursor=pointer]:
+                - /url: /desk/accounting-dimension
+            - generic "Currency" [ref=e62]:
+              - link "Currency" [ref=e64] [cursor=pointer]:
+                - /url: /desk/currency
+            - generic "Currency Exchange" [ref=e67]:
+              - link "Currency Exchange" [ref=e69] [cursor=pointer]:
+                - /url: /desk/currency-exchange
+            - generic "Finance Book" [ref=e72]:
+              - link "Finance Book" [ref=e74] [cursor=pointer]:
+                - /url: /desk/finance-book
+            - generic "Mode of Payment" [ref=e77]:
+              - link "Mode of Payment" [ref=e79] [cursor=pointer]:
+                - /url: /desk/mode-of-payment
+            - generic "Payment Term" [ref=e82]:
+              - link "Payment Term" [ref=e84] [cursor=pointer]:
+                - /url: /desk/payment-term
+            - generic "Journal Entry Template" [ref=e87]:
+              - link "Journal Entry Template" [ref=e89] [cursor=pointer]:
+                - /url: /desk/journal-entry-template
+            - generic "Terms and Conditions" [ref=e92]:
+              - link "Terms and Conditions" [ref=e94] [cursor=pointer]:
+                - /url: /desk/terms-and-conditions
+            - generic "Company" [ref=e97]:
+              - link "Company" [ref=e99] [cursor=pointer]:
+                - /url: /desk/company
+            - generic "Fiscal Year" [ref=e102]:
+              - link "Fiscal Year" [ref=e104] [cursor=pointer]:
+                - /url: /desk/fiscal-year
+            - generic "Sales Taxes" [ref=e107]:
+              - link "Sales Taxes" [ref=e109] [cursor=pointer]:
+                - /url: /desk/sales-taxes-and-charges-template
+        - generic "Opening & Closing" [ref=e112]:
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e117]: Opening & Closing
+            - button [ref=e119]
+          - generic [ref=e121]:
+            - generic "COA Importer" [ref=e122]:
+              - link "COA Importer" [ref=e124] [cursor=pointer]:
+                - /url: /desk/chart-of-accounts-importer/Chart of Accounts Importer
+            - generic "Opening Invoice Tool" [ref=e127]:
+              - link "Opening Invoice Tool" [ref=e129] [cursor=pointer]:
+                - /url: /desk/opening-invoice-creation-tool/Opening Invoice Creation Tool
+            - generic "Accounting Period" [ref=e132]:
+              - link "Accounting Period" [ref=e134] [cursor=pointer]:
+                - /url: /desk/accounting-period
+            - generic "FX Revaluation" [ref=e137]:
+              - link "FX Revaluation" [ref=e139] [cursor=pointer]:
+                - /url: /desk/exchange-rate-revaluation
+            - generic "Period Closing Voucher" [ref=e142]:
+              - link "Period Closing Voucher" [ref=e144] [cursor=pointer]:
+                - /url: /desk/period-closing-voucher
+        - generic "Settings" [ref=e147]:
+          - generic [ref=e149] [cursor=pointer]:
+            - generic [ref=e152]: Settings
+            - button [ref=e154]
+          - generic [ref=e156]:
+            - generic "Accounts Settings" [ref=e157]:
+              - link "Accounts Settings" [ref=e159] [cursor=pointer]:
+                - /url: /desk/accounts-settings/Accounts Settings
+            - generic "Currency Exchange Settings" [ref=e162]:
+              - link "Currency Exchange Settings" [ref=e164] [cursor=pointer]:
+                - /url: /desk/currency-exchange-settings/Currency Exchange Settings
+      - generic [ref=e167]:
+        - paragraph [ref=e168]:
+          - generic [ref=e169] [cursor=pointer]: Getting Started
+        - generic "User Menu" [ref=e173] [cursor=pointer]:
+          - generic "marcio dutra" [ref=e175]:
+            - generic "marcio dutra" [ref=e176]: md
+          - generic [ref=e177]:
+            - generic [ref=e178]: marcio dutra
+            - generic [ref=e179]: professormarciodutra@gmail.com
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]: Getting Started
+        - generic [ref=e184]:
+          - button [ref=e185] [cursor=pointer]
+          - button [ref=e187] [cursor=pointer]
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - generic [ref=e194]: Accounting Onboarding
+          - generic [ref=e195]: 1/6 steps completed
+        - generic [ref=e196]:
+          - generic [ref=e197]: 17% completed
+          - generic [ref=e199]: Skip All
+        - generic [ref=e200]:
+          - generic [ref=e201]: Configure Chart of Accounts
+          - generic [ref=e208]: Setup Sales Taxes
+          - generic [ref=e217]: Create Sales Invoice
+          - generic [ref=e226]: Create Payment Entry
+          - generic [ref=e235]: View Balance Sheet
+          - generic [ref=e244]: Review Accounts Settings
+  - generic [ref=e253]:
+    - banner
+    - generic [ref=e254]:
+      - text: /
+      - generic [ref=e255]:
+        - generic [ref=e258]:
+          - list [ref=e261]:
+            - listitem [ref=e262]:
+              - link [ref=e263] [cursor=pointer]:
+                - /url: /desk
+            - listitem [ref=e265]:
+              - link "/ Stock" [ref=e266] [cursor=pointer]:
+                - /url: /desk/stock
+          - generic [ref=e269]:
+            - generic [ref=e271]:
+              - combobox [ref=e272]:
+                - option "CD Informática" [selected]
+              - generic: company
+            - generic [ref=e273]:
+              - button "Expand" [ref=e275] [cursor=pointer]
+              - button "View" [ref=e278] [cursor=pointer]
+            - generic [ref=e280]:
+              - button "Menu" [ref=e282] [cursor=pointer]
+              - button "New" [ref=e286] [cursor=pointer]
+        - generic [ref=e297]:
+          - generic [ref=e298] [cursor=pointer]: CD Informática
+          - list [ref=e302]:
+            - listitem [ref=e303]:
+              - generic [ref=e304] [cursor=pointer]: ATIVO - CI
+              - generic [ref=e308]: R$ 0,00 Cr
+            - listitem [ref=e309]:
+              - generic [ref=e310] [cursor=pointer]: SUPERÁVIT/DÉFICIT LÍQUIDO DO PERÍODO - CI
+              - generic [ref=e314]: R$ 0,00 Cr
+              - list [ref=e315]:
+                - listitem [ref=e316]:
+                  - generic [ref=e317] [cursor=pointer]: OUTRAS RECEITAS E DESPESAS - CI
+                  - generic [ref=e321]: R$ 0,00 Cr
+                  - list [ref=e322]:
+                    - listitem [ref=e323]:
+                      - generic [ref=e324] [cursor=pointer]: RECEITAS E DESPESAS NÃO OPERACIONAIS - CI
+                      - generic [ref=e328]: R$ 0,00 Cr
+                      - list [ref=e329]:
+                        - listitem [ref=e330]:
+                          - generic [ref=e331] [cursor=pointer]: RECEITAS E DESPESAS NÃO OPERACIONAIS 1 - CI
+                          - generic [ref=e335]: R$ 0,00 Cr
+                          - list [ref=e336]:
+                            - listitem [ref=e337]:
+                              - generic [ref=e338] [cursor=pointer]: DESPESAS NÃO OPERACIONAIS - CI
+                              - generic [ref=e342]: R$ 0,00 Cr
+                              - list [ref=e343]:
+                                - listitem [ref=e344]:
+                                  - generic [ref=e345] [cursor=pointer]: (-) Outras Despesas Não Operacionais - CI
+                                  - generic [ref=e349]:
+                                    - button "Edit" [ref=e350] [cursor=pointer]
+                                    - button "Delete" [ref=e351] [cursor=pointer]
+                                    - button "View Ledger" [ref=e352] [cursor=pointer]
+                                  - generic [ref=e353]: R$ 0,00 Cr
+                                - listitem [ref=e354]:
+                                  - generic [ref=e355] [cursor=pointer]: (-) Valor Contábil dos Bens e Direitos Alienados - CI
+                                  - generic [ref=e359]: R$ 0,00 Cr
+                            - listitem [ref=e360]:
+                              - generic [ref=e361] [cursor=pointer]: RECEITAS NÃO OPERACIONAIS - CI
+                              - generic [ref=e365]: R$ 0,00 Cr
+                - listitem [ref=e366]:
+                  - generic [ref=e367] [cursor=pointer]: RESULTADO OPERACIONAL - CI
+                  - generic [ref=e371]: R$ 0,00 Cr
+            - listitem [ref=e372]:
+              - generic [ref=e373] [cursor=pointer]: PASSIVO - CI
+              - generic [ref=e377]: R$ 0,00 Cr
+            - listitem [ref=e378]:
+              - generic [ref=e379] [cursor=pointer]: RESULTADO LÍQUIDO DO PERÍODO - CI
+              - generic [ref=e383]: R$ 0,00 Cr
+            - listitem [ref=e384]:
+              - generic [ref=e385] [cursor=pointer]: CUSTOS DE PRODUÇÃO - CI
+              - generic [ref=e389]: R$ 0,00 Cr
+    - contentinfo
+```
+
+# Test source
+
+```ts
+  1   | import { test, expect } from '@playwright/test';
+  2   | 
+  3   | test.describe('Accounting - Accounts Setup', () => {
+  4   |   test('should edit the account type and complete the setup step', async ({
+  5   |     page,
+  6   |   }) => {
+  7   |     // Dashboard
+  8   |     await page.goto('/desk');
+  9   | 
+  10  |     // Accounting
+  11  |     const accounting = page.locator(
+  12  |       'a.desktop-icon[data-id="Accounting"]'
+  13  |     );
+  14  | 
+  15  |     await expect(accounting).toBeVisible();
+  16  |     await accounting.click();
+  17  | 
+  18  |     // Accounting modal
+  19  |     const accountingModal = page.locator('.desktop-modal.show');
+  20  | 
+  21  |     await expect(accountingModal).toBeVisible();
+  22  | 
+  23  |     // Accounts Setup
+  24  |     const accountsSetup = accountingModal.locator(
+  25  |       'a.desktop-icon[data-id="Accounts Setup"]'
+  26  |     );
+  27  | 
+  28  |     await expect(accountsSetup).toBeVisible();
+  29  |     await accountsSetup.click();
+  30  | 
+  31  |     await expect(page).toHaveURL(/\/desk\/account/);
+  32  | 
+  33  |     // Account hierarchy
+  34  |     const superavit = page.locator(
+  35  |       'a.tree-label[data-doctype="Account"][data-name="SUPERÁVIT/DÉFICIT LÍQUIDO DO PERÍODO - CI"]'
+  36  |     );
+  37  | 
+  38  |     await expect(superavit).toBeVisible();
+  39  |     await superavit.click();
+  40  | 
+  41  |     const outrasReceitasDespesas = page.locator(
+  42  |       'a.tree-label[data-doctype="Account"][data-name="OUTRAS RECEITAS E DESPESAS - CI"]'
+  43  |     );
+  44  | 
+  45  |     await expect(outrasReceitasDespesas).toBeVisible();
+  46  |     await outrasReceitasDespesas.click();
+  47  | 
+  48  |     const receitasDespesasNaoOperacionais = page.locator(
+  49  |       'a.tree-label[data-doctype="Account"][data-name="RECEITAS E DESPESAS NÃO OPERACIONAIS - CI"]'
+  50  |     );
+  51  | 
+  52  |     await expect(receitasDespesasNaoOperacionais).toBeVisible();
+  53  |     await receitasDespesasNaoOperacionais.click();
+  54  | 
+  55  |     const receitasDespesasNaoOperacionais1 = page.locator(
+  56  |       'a.tree-label[data-doctype="Account"][data-name="RECEITAS E DESPESAS NÃO OPERACIONAIS 1 - CI"]'
+  57  |     );
+  58  | 
+  59  |     await expect(receitasDespesasNaoOperacionais1).toBeVisible();
+  60  |     await receitasDespesasNaoOperacionais1.click();
+  61  | 
+  62  |     const despesasNaoOperacionais = page.locator(
+  63  |       'a.tree-label[data-doctype="Account"][data-name="DESPESAS NÃO OPERACIONAIS - CI"]'
+  64  |     );
+  65  | 
+  66  |     await expect(despesasNaoOperacionais).toBeVisible();
+  67  |     await despesasNaoOperacionais.click();
+  68  | 
+  69  |     const outrasDespesasNaoOperacionais = page.locator(
+  70  |       'a.tree-label[data-doctype="Account"][data-name="(-) Outras Despesas Não Operacionais - CI"]'
+  71  |     );
+  72  | 
+  73  |     await expect(outrasDespesasNaoOperacionais).toBeVisible();
+  74  |     await outrasDespesasNaoOperacionais.click();
+  75  | 
+  76  |     // Edit account
+  77  |     const editButton = page.getByRole('button', { name: 'Edit' });
+  78  | 
+  79  |     await expect(editButton).toBeVisible();
+> 80  |     await editButton.click();
+      |                      ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  81  | 
+  82  |     // Account Category
+  83  |     const accountCategory = page.locator(
+  84  |       'input[data-fieldname="account_category"]'
+  85  |     );
+  86  | 
+  87  |     await expect(accountCategory).toBeVisible();
+  88  |     await accountCategory.fill('Cash and Cash Equivalents');
+  89  | 
+  90  |     const categoryOption = page.getByText(
+  91  |       'Cash and Cash Equivalents, Asset',
+  92  |       { exact: true }
+  93  |     );
+  94  | 
+  95  |     await expect(categoryOption).toBeVisible();
+  96  |     await categoryOption.click();
+  97  | 
+  98  |     // Account Type
+  99  |     const accountType = page.locator(
+  100 |       'select[data-fieldname="account_type"]'
+  101 |     );
+  102 | 
+  103 |     await expect(accountType).toBeVisible();
+  104 |     await accountType.selectOption('Accumulated Depreciation');
+  105 | 
+  106 |     // Save
+  107 |     const saveButton = page.locator(
+  108 |       'button.primary-action[data-label="Save"]'
+  109 |     );
+  110 | 
+  111 |     await expect(saveButton).toBeVisible();
+  112 |     await saveButton.click();
+  113 | 
+  114 |     // Final validation
+  115 |     const completedStep = page.locator(
+  116 |       '.onb-title-steps'
+  117 |     );
+  118 | 
+  119 |     await expect(completedStep).toHaveText('1/6 steps completed');
+  120 |   });
+  121 | });
+```
