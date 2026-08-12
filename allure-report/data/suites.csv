@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","12570","authenticate","setup","2026-08-12","passed","2026-08-12","","auth\auth.setup.ts","",""
+"","8594","should access the company details","chromium","2026-08-12","passed","2026-08-12","Organization - Company","organization\company.spec.ts","",""
+"","4926","ERPNext should be accessible","chromium","2026-08-12","passed","2026-08-12","","erpnext.smoke.spec.ts","",""

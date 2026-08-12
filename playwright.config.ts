@@ -1,4 +1,15 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const baseURL = process.env.BASE_URL;
+
+if (!baseURL) {
+  throw new Error(
+    'BASE_URL não foi definida. Verifique o arquivo .env.'
+  );
+}
 
 export default defineConfig({
   testDir: './tests',
@@ -12,23 +23,38 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   reporter: [
-    ['list'],
-    ['html', { open: 'never' }]
+    ['html'],
+    [
+      'allure-playwright',
+      {
+        resultsDir: 'allure-results',
+      },
+    ],
   ],
 
   use: {
-    baseURL: process.env.BASE_URL,
+    baseURL,
+
     trace: 'on-first-retry',
+
     screenshot: 'only-on-failure',
+
     video: 'retain-on-failure',
   },
 
   projects: [
     {
+      name: 'setup',
+      testMatch: /.*\.setup\.ts/,
+    },
+
+    {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
       },
+      dependencies: ['setup'],
     },
   ],
 });

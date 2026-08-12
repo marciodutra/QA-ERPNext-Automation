@@ -1,0 +1,44 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex b074e4b..816187a 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -290,32 +290,19 @@[m [mEsse comando verifica o código sem gerar arquivos JavaScript.[m
+ [m
+ O sistema utilizado como aplicação sob teste é o ERPNext.[m
+ [m
+[31m-Ambiente atual:[m
+[32m+[m[32mO ambiente atual está hospedado no Frappe Cloud.[m
+ [m
+[31m-```text[m
+[31m-ERPNext hospedado no Frappe Cloud[m
+[31m-```[m
+[32m+[m[32mA URL do ambiente de teste não deve ser colocada diretamente nos arquivos de teste.[m
+ [m
+[31m-A URL do ambiente não deve ficar diretamente espalhada pelos testes.[m
+[32m+[m[32mA configuração é feita através de variável de ambiente.[m
+ [m
+[31m-A configuração será posteriormente migrada para variável de ambiente.[m
+[32m+[m[32m## Configuração do ambiente[m
+ [m
+[31m-Exemplo futuro:[m
+[32m+[m[32mO projeto utiliza dois arquivos:[m
+ [m
+ ```text[m
+[31m-BASE_URL=https://seu-erp.frappe.cloud[m
+[31m-```[m
+[31m-[m
+[31m-Isso permitirá executar os mesmos testes contra diferentes ambientes:[m
+[31m-[m
+[31m-```text[m
+[31m-Development[m
+[31m-Testing[m
+[31m-Staging[m
+[31m-Production[m
+[31m-```[m
+[31m-[m
+[31m-sem alterar o código dos testes.[m
+[32m+[m[32m.env[m
+[32m+[m[32m.env.example[m
+ [m
+ ---[m
+ [m
