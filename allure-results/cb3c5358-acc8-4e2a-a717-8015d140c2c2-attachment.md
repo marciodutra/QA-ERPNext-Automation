@@ -1,0 +1,278 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: accounting\invoicing.spec.ts >> Accounting - Invoicing >> should navigate to the Chart of Accounts and access the expected account
+- Location: tests\accounting\invoicing.spec.ts:4:7
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('a.desktop-icon[data-id="Invoicing"]')
+    - locator resolved to <a data-logo="" data-type="" data-id="Invoicing" class="desktop-icon" data-icon="accounting" href="/desk/invoicing?sidebar=Invoicing">…</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="modal-backdrop fade show"></div> intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <img alt="Payments" class="app-icon" src="/assets/erpnext/icons/desktop_icons/solid/payments.svg"/> from <div tabindex="-1" role="dialog" aria-modal="true" class="modal fade desktop-modal show">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <img alt="Payments" class="app-icon" src="/assets/erpnext/icons/desktop_icons/solid/payments.svg"/> from <div tabindex="-1" role="dialog" aria-modal="true" class="modal fade desktop-modal show">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    54 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <img alt="Payments" class="app-icon" src="/assets/erpnext/icons/desktop_icons/solid/payments.svg"/> from <div tabindex="-1" role="dialog" aria-modal="true" class="modal fade desktop-modal show">…</div> subtree intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner
+    - generic [ref=e4]:
+      - text: /
+      - generic [ref=e11]:
+        - navigation [ref=e12]:
+          - img "App Logo" [ref=e14]
+          - button "Search Ctrl+K" [ref=e16] [cursor=pointer]:
+            - generic [ref=e17]: Search
+            - generic [ref=e20]: Ctrl+K
+          - generic [ref=e21]:
+            - button "Notifications" [ref=e24] [cursor=pointer]
+            - generic "marcio dutra" [ref=e28] [cursor=pointer]:
+              - generic "marcio dutra" [ref=e29]: md
+        - generic [ref=e31]:
+          - generic [ref=e33]:
+            - generic [ref=e35]:
+              - generic [ref=e36]: Your trial ends in 14 days
+              - generic [ref=e37]: Please upgrade for uninterrupted services
+            - button "Upgrade" [ref=e39] [cursor=pointer]
+            - button [ref=e41] [cursor=pointer]
+          - generic [ref=e43]:
+            - generic [ref=e44] [cursor=pointer]:
+              - img "Framework" [ref=e46]
+              - generic [ref=e47]: Framework
+            - link "Organization Organization" [ref=e49] [cursor=pointer]:
+              - /url: /desk/company?sidebar=Organization
+              - img "Organization" [ref=e51]
+              - generic [ref=e52]: Organization
+            - generic [ref=e54] [cursor=pointer]:
+              - generic [ref=e57]:
+                - link "Invoicing":
+                  - /url: /desk/invoicing?sidebar=Invoicing
+                  - generic:
+                    - img "Invoicing"
+                - link "Payments":
+                  - /url: /desk/dashboard-view/Payments?sidebar=Payments
+                  - generic:
+                    - img "Payments"
+                - link "Financial Reports":
+                  - /url: /desk/query-report/Balance Sheet
+                  - generic:
+                    - img "Financial Reports"
+                - link "Accounts Setup":
+                  - /url: /desk/account?sidebar=Accounts%20Setup
+                  - generic:
+                    - img "Accounts Setup"
+                - link "Taxes":
+                  - /url: /desk/sales-taxes-and-charges-template?sidebar=Taxes
+                  - generic:
+                    - img "Taxes"
+                - link "Banking":
+                  - /url: /desk/bank-clearance/Bank Clearance?sidebar=Banking
+                  - generic:
+                    - img "Banking"
+                - link "Budget":
+                  - /url: /desk/budget?sidebar=Budget
+                  - generic:
+                    - img "Budget"
+                - link "Share Management":
+                  - /url: /desk/shareholder?sidebar=Share%20Management
+                  - generic:
+                    - img "Share Management"
+                - link "Subscription":
+                  - /url: /desk/subscription?sidebar=Subscription
+                  - generic:
+                    - img "Subscription"
+              - generic [ref=e58]: Accounting
+            - link "Assets Assets" [ref=e60] [cursor=pointer]:
+              - /url: /desk/assets?sidebar=Assets
+              - img "Assets" [ref=e62]
+              - generic [ref=e63]: Assets
+            - link "Buying Buying" [ref=e65] [cursor=pointer]:
+              - /url: /desk/buying?sidebar=Buying
+              - img "Buying" [ref=e67]
+              - generic [ref=e68]: Buying
+            - link "Manufacturing Manufacturing" [ref=e70] [cursor=pointer]:
+              - /url: /desk/manufacturing?sidebar=Manufacturing
+              - img "Manufacturing" [ref=e72]
+              - generic [ref=e73]: Manufacturing
+            - link "Projects Projects" [ref=e75] [cursor=pointer]:
+              - /url: /desk/projects?sidebar=Projects
+              - img "Projects" [ref=e77]
+              - generic [ref=e78]: Projects
+            - link "Quality Quality" [ref=e80] [cursor=pointer]:
+              - /url: /desk/quality?sidebar=Quality
+              - img "Quality" [ref=e82]
+              - generic [ref=e83]: Quality
+            - link "Selling Selling" [ref=e85] [cursor=pointer]:
+              - /url: /desk/selling?sidebar=Selling
+              - img "Selling" [ref=e87]
+              - generic [ref=e88]: Selling
+            - link "Stock Stock" [ref=e90] [cursor=pointer]:
+              - /url: /desk/stock?sidebar=Stock
+              - img "Stock" [ref=e92]
+              - generic [ref=e93]: Stock
+            - link "Subcontracting Subcontracting" [ref=e95] [cursor=pointer]:
+              - /url: /desk/subcontracting?sidebar=Subcontracting
+              - img "Subcontracting" [ref=e97]
+              - generic [ref=e98]: Subcontracting
+            - link "ERPNext Settings ERPNext Settings" [ref=e100] [cursor=pointer]:
+              - /url: /desk/global-defaults/Global Defaults?sidebar=ERPNext%20Settings
+              - img "ERPNext Settings" [ref=e102]
+              - generic [ref=e103]: ERPNext Settings
+    - contentinfo
+  - dialog [active] [ref=e106]:
+    - generic [ref=e107]:
+      - heading "Accounting" [level=4] [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]: Accounting
+          - textbox [ref=e114]
+      - generic [ref=e117]:
+        - link "Invoicing Invoicing" [ref=e118] [cursor=pointer]:
+          - /url: /desk/invoicing?sidebar=Invoicing
+          - img "Invoicing" [ref=e120]
+          - generic [ref=e121]: Invoicing
+        - link "Payments Payments" [ref=e123] [cursor=pointer]:
+          - /url: /desk/dashboard-view/Payments?sidebar=Payments
+          - img "Payments" [ref=e125]
+          - generic [ref=e126]: Payments
+        - link "Financial Reports Financial Reports" [ref=e128] [cursor=pointer]:
+          - /url: /desk/query-report/Balance Sheet
+          - img "Financial Reports" [ref=e130]
+          - generic [ref=e131]: Financial Reports
+        - link "Accounts Setup Accounts Setup" [ref=e133] [cursor=pointer]:
+          - /url: /desk/account?sidebar=Accounts%20Setup
+          - img "Accounts Setup" [ref=e135]
+          - generic [ref=e136]: Accounts Setup
+        - link "Taxes Taxes" [ref=e138] [cursor=pointer]:
+          - /url: /desk/sales-taxes-and-charges-template?sidebar=Taxes
+          - img "Taxes" [ref=e140]
+          - generic [ref=e141]: Taxes
+        - link "Banking Banking" [ref=e143] [cursor=pointer]:
+          - /url: /desk/bank-clearance/Bank Clearance?sidebar=Banking
+          - img "Banking" [ref=e145]
+          - generic [ref=e146]: Banking
+        - link "Budget Budget" [ref=e148] [cursor=pointer]:
+          - /url: /desk/budget?sidebar=Budget
+          - img "Budget" [ref=e150]
+          - generic [ref=e151]: Budget
+        - link "Share Management Share Management" [ref=e153] [cursor=pointer]:
+          - /url: /desk/shareholder?sidebar=Share%20Management
+          - img "Share Management" [ref=e155]
+          - generic [ref=e156]: Share Management
+        - link "Subscription Subscription" [ref=e158] [cursor=pointer]:
+          - /url: /desk/subscription?sidebar=Subscription
+          - img "Subscription" [ref=e160]
+          - generic [ref=e161]: Subscription
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test.describe('Accounting - Invoicing', () => {
+  4  |   test('should navigate to the Chart of Accounts and access the expected account', async ({
+  5  |     page,
+  6  |   }) => {
+  7  |     // Dashboard
+  8  |     await page.goto('/desk');
+  9  | 
+  10 |     // Accounting
+  11 |     const accounting = page.locator(
+  12 |       'a.desktop-icon[data-id="Accounting"]'
+  13 |     );
+  14 | 
+  15 |     await expect(accounting).toBeVisible();
+  16 |     await accounting.click();
+  17 | 
+  18 |     // Invoicing
+  19 |     const invoicing = page.locator(
+  20 |       'a.desktop-icon[data-id="Invoicing"]'
+  21 |     );
+  22 | 
+  23 |     await expect(invoicing).toBeVisible();
+> 24 |     await invoicing.click();
+     |                     ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  25 | 
+  26 |     await expect(page).toHaveURL(/\/desk\/invoicing/);
+  27 | 
+  28 |     // Configure Chart of Accounts
+  29 |     const configureChartOfAccounts = page.getByText(
+  30 |       'Configure Chart of Accounts',
+  31 |       { exact: true }
+  32 |     );
+  33 | 
+  34 |     await expect(configureChartOfAccounts).toBeVisible();
+  35 |     await configureChartOfAccounts.click();
+  36 | 
+  37 |     // Account hierarchy
+  38 |     const ativo = page.locator(
+  39 |       'a.tree-label[data-doctype="Account"][data-name="ATIVO - CI"]'
+  40 |     );
+  41 | 
+  42 |     await expect(ativo).toBeVisible();
+  43 |     await ativo.click();
+  44 | 
+  45 |     const circulante = page.locator(
+  46 |       'a.tree-label[data-doctype="Account"][data-name="CIRCULANTE 1 - CI"]'
+  47 |     );
+  48 | 
+  49 |     await expect(circulante).toBeVisible();
+  50 |     await circulante.click();
+  51 | 
+  52 |     const contasRetificadoras = page.locator(
+  53 |       'a.tree-label[data-doctype="Account"][data-name="CONTAS RETIFICADORAS - CI"]'
+  54 |     );
+  55 | 
+  56 |     await expect(contasRetificadoras).toBeVisible();
+  57 |     await contasRetificadoras.click();
+  58 | 
+  59 |     // Final validation
+  60 |     const duplicatasDescontadas = page.locator(
+  61 |       'a.tree-label[data-doctype="Account"][data-name="(-) Duplicatas Descontadas - CI"]'
+  62 |     );
+  63 | 
+  64 |     await expect(duplicatasDescontadas).toBeVisible();
+  65 |   });
+  66 | });
+```

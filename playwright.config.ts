@@ -23,7 +23,6 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   reporter: [
-    ['html'],
     [
       'allure-playwright',
       {
@@ -45,7 +44,7 @@ export default defineConfig({
   projects: [
     {
       name: 'setup',
-      testMatch: /.*\.setup\.ts/,
+      testMatch: /.*\.setup.ts/,
     },
 
     {
